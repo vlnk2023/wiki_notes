@@ -35,7 +35,7 @@
    * 知识库检索：针对特定问题进行深度查询。
    * 架构维护：对已有的 Wiki 进行一致性检查或生成全局知识地图。
     [查看知识图谱](wiki/knowledge_map.md)
-  ![知识图谱可视化](https://github.com/vlnk2023/wiki_notes/blob/main/Pasted%20image%2020260404213309.png)
+  ![知识图谱可视化](Pasted image 20260404213454.png)
   你可以通过直接提供原始文档并下达“开始编译”指令来激活此工作流。
 
 
