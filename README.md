@@ -9,20 +9,33 @@
 - `prompts/`：知识整理流程中使用的提示词模板
 - `.obsidian/`：Obsidian 配置文件
 
-## 使用方式
+## 以下是该 Skill 的核心介绍：
 
-1. 用 Obsidian 打开本仓库目录。
-2. 在 `raw/` 中存放原始素材或摘录。
-3. 根据需要使用 `prompts/` 中的提示词进行抽取、写作、索引更新和审查。
-4. 将整理后的内容沉淀到 `wiki/` 中。
+  1. 核心定位
+  该 Skill 担任“多领域知识架构师”的角色，旨在处理包括金融、心理学、系统工程等跨学科内容，同时在 wiki/
+  目录下维护一个统一的知识图谱。
 
-## Git 说明
+  2. 7 阶段工作流 (Pipeline)
+  Skill 遵循一套标准化的操作规程，根据你的需求自动匹配阶段：
+   * A: Extract (提取)：从原始文档中识别领域 (Domain)、主题 (Theme) 和高密度概念。
+   * B: Write (编写)：创建或合并概念文件（Markdown），遵循“定义 -> 重要性 -> 原理 -> 局限性”的标准结构。
+   * C: Relate (关联)：维护 relations.json，建立概念间的语义桥梁（如支持、反对、因果等）。
+   * D: Maintain (维护)：按照“领域 -> 主题 -> 概念”进行聚类更新 index.md。
+   * E: Answer (问答)：基于现有 Wiki 上下文提供专业的跨领域类比回答。
+   * F: Audit (审计)：检查标签一致性、路径错误和逻辑漏洞。
+   * G: Visualize (可视化)：生成符合 JSON Canvas 规范的 knowledge_map.canvas，供 Obsidian 等工具查看。
 
-- 已忽略本地界面状态文件：
-  - `.obsidian/workspace.json`
-  - `.obsidian/graph.json`
-- 其余配置和知识内容默认纳入版本控制。
+  3. 三大核心原则
+   * 领域优先 (Domain-First)：所有概念必须归属于特定的领域（参考 taxonomy.json），确保知识体系的严谨性。
+   * 跨领域桥接 (Cross-Domain Bridging)：特别强调发现不同学科间的底层规律迁移，建立跨领域连接。
+   * 格式严谨性：严格区分数据（JSON 用于关联和可视化）与表现（Markdown 用于文章和索引）。
 
-## 远程仓库
+  4. 适用场景
+   * 自动编译：当你提供原始笔记（raw/）并要求整理时，它会自动运行 A → B → C → D → G 全流程。
+   * 知识库检索：针对特定问题进行深度查询。
+   * 架构维护：对已有的 Wiki 进行一致性检查或生成全局知识地图。
 
-GitHub: `https://github.com/vlnk2023/wiki_notes.git`
+  你可以通过直接提供原始文档并下达“开始编译”指令来激活此工作流。
+
+
+ 
