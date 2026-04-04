@@ -1,0 +1,28 @@
+{
+  "domain": "psychology",
+  "theme": "睡眠与工作绩效的日内动态关系",
+  "core_claim": "前一晚睡眠质量通过提升次日主观活力，进而增强日内工作表现，体现了资源的短期动态补给机制。",
+  "key_concepts": [
+    {"name": "日内动态变化 (Within-person variability)", "definition": "个体内部随时间（如天、小时）波动的变化，而非个体间的差异。"},
+    {"name": "经验采样法 (ESM)", "definition": "通过日常密集采样记录参与者即时状态的研究设计，优于传统横断面研究。"},
+    {"name": "活力 (Vitality)", "definition": "一种动态心理资源，指早晨或工作期间的主观能量或精神状态。"},
+    {"name": "中介作用 (Mediation)", "definition": "自变量通过中介变量影响因变量的过程，本文指活力在睡眠与绩效间的桥接。"},
+    {"name": "单源偏差 (Mono-source bias)", "definition": "数据仅来源于单一主体（如全是自评）导致的系统性误差，本文通过加入他人评价来减少。"}
+  ],
+  "semantic_relations": [
+    {"source": "睡眠质量/时长", "target": "活力 (Vitality)", "type": "causes", "reason": "良好的睡眠是心理资源（活力）的补给机制"},
+    {"source": "活力 (Vitality)", "target": "工作表现", "type": "causes", "reason": "更高的感知活力与更高的自评及他人评价绩效相关"},
+    {"source": "活力 (Vitality)", "target": "睡眠-绩效路径", "type": "enables", "reason": "活力作为核心中介变量解释了资源到表现的转化"},
+    {"source": "经验采样法 (ESM)", "target": "日内动态变化", "type": "enables", "reason": "密集采样设计允许捕捉并分析个体内部的动态波动"}
+  ],
+  "answerable_questions": [
+    "睡眠质量如何影响第二天的日常工作表现？",
+    "为什么活力被视为一种动态心理资源而非静态特质？",
+    "研究员工绩效时，为什么要区分自评与他人评价？"
+  ],
+  "uncertainties": [
+    "任务难度、压力水平和情绪调节策略对活力与绩效关系的调节作用。",
+    "缺乏客观睡眠测量（如穿戴设备数据）可能带来的主观偏差。"
+  ],
+  "source_file": "raw/Clippings/gpt做的_Fresh as a daisy读书笔记1.md"
+}

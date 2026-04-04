@@ -1,0 +1,70 @@
+# 系统文件
+.DS_Store
+Thumbs.db
+*.db
+*.sqlite
+*.sqlite3
+
+# IDE/编辑器配置
+.vscode/
+.idea/
+.obsidian/workspace.json
+.obsidian/graph.json
+*.swp
+*.swo
+*~
+.project
+.classpath
+*.sublime-project
+*.sublime-workspace
+
+# 依赖和包管理
+node_modules/
+venv/
+env/
+__pycache__/
+*.egg-info/
+dist/
+build/
+
+# 临时和日志文件
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+.cache/
+
+# OS文件
+.Spotlight-V100/
+.Trashes/
+ehthumbs.db
+desktop.ini
+
+# 私密和本地文件
+.env
+.env.local
+secrets/
+private/
+local_config.json
+
+# 构建产物
+dist/
+build/
+*.min.js
+*.min.css
+
+# 备份文件
+*.bak
+*.backup
+*~
+*.swp
+
+# 特定于此项目的文件（可选，根据需要取消注释）
+# raw/answer/    # 如果回答文件不需要版本控制
+# raw/cache/     # 如果有缓存目录
+
+# 其他
+.history/
+.DS_Store
+*.code-workspace

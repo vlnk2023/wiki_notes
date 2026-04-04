@@ -1,0 +1,202 @@
+{
+  "metadata": {
+    "concept_degrees": {
+      "去自然化能力": {"in": 0, "out": 1, "total_degree": 1, "domain": "cognition"},
+      "认知杠杆": {"in": 7, "out": 1, "total_degree": 8, "domain": "cognition"},
+      "知识复利": {"in": 1, "out": 1, "total_degree": 2, "domain": "cognition"},
+      "逆向归纳": {"in": 1, "out": 1, "total_degree": 2, "domain": "strategy"},
+      "制度套利": {"in": 2, "out": 0, "total_degree": 2, "domain": "strategy"},
+      "失效模式案例库": {"in": 1, "out": 2, "total_degree": 3, "domain": "systems"},
+      "系统漏洞分类": {"in": 1, "out": 2, "total_degree": 3, "domain": "systems"},
+      "弱闭环": {"in": 0, "out": 2, "total_degree": 2, "domain": "systems"},
+      "学术资源锚点": {"in": 1, "out": 2, "total_degree": 3, "domain": "knowledge-engineering"},
+      "元数据": {"in": 2, "out": 0, "total_degree": 2, "domain": "knowledge-engineering"},
+      "AI工具链": {"in": 0, "out": 3, "total_degree": 3, "domain": "knowledge-engineering"},
+      "活力": {"in": 2, "out": 0, "total_degree": 2, "domain": "psychology"},
+      "经验采样法": {"in": 0, "out": 3, "total_degree": 3, "domain": "psychology"},
+      "日内动态变化": {"in": 1, "out": 1, "total_degree": 2, "domain": "psychology"}
+    }
+  },
+  "edges": [
+    {
+      "from": "LLM知识库 (LLM Knowledge Base)",
+      "to": "检索增强生成 (RAG)",
+      "relation": "contradicts",
+      "explanation": "LLM知识库是 RAG 的轻量级替代方案，强调直接读取而非切片检索。",
+      "strength": 0.95,
+      "is_cross_domain": false,
+      "domain_gap": null
+    },
+    {
+      "from": "去自然化能力",
+      "to": "认知杠杆",
+      "relation": "enables",
+      "explanation": "只有先把规则与常识重新变成可疑对象，才可能发现真正的杠杆点。",
+      "strength": 0.9,
+      "is_cross_domain": false,
+      "domain_gap": null
+    },
+    {
+      "from": "逆向归纳",
+      "to": "认知杠杆",
+      "relation": "supports",
+      "explanation": "从结果倒推条件与薄弱关卡，是认知杠杆的核心推理路径。",
+      "strength": 0.88,
+      "is_cross_domain": true,
+      "domain_gap": "把博弈论中的倒推方法迁移为认知层的杠杆定位方法。"
+    },
+    {
+      "from": "失效模式案例库",
+      "to": "认知杠杆",
+      "relation": "enables",
+      "explanation": "断裂样本的跨场景复用，使杠杆识别不必每次从零开始。",
+      "strength": 0.85,
+      "is_cross_domain": true,
+      "domain_gap": "系统失效分析被迁移为认知层的结构识别基础设施。"
+    },
+    {
+      "from": "知识复利",
+      "to": "认知杠杆",
+      "relation": "causes",
+      "explanation": "长期增量学习会累积出更强的异常感知和系统建模能力。",
+      "strength": 0.8,
+      "is_cross_domain": false,
+      "domain_gap": null
+    },
+    {
+      "from": "系统漏洞分类",
+      "to": "认知杠杆",
+      "relation": "supports",
+      "explanation": "结构性、时间性和认知性分类为杠杆扫描提供了稳定模板。",
+      "strength": 0.83,
+      "is_cross_domain": true,
+      "domain_gap": "系统工程中的漏洞分类被迁移为认知扫描框架。"
+    },
+    {
+      "from": "认知杠杆",
+      "to": "制度套利",
+      "relation": "enables",
+      "explanation": "对系统不对称的认知，会在规则场景转化为具体的套利动作。",
+      "strength": 0.92,
+      "is_cross_domain": true,
+      "domain_gap": "认知层的洞察迁移到策略层，变成对制度边界的实际利用。"
+    },
+    {
+      "from": "弱闭环",
+      "to": "制度套利",
+      "relation": "enables",
+      "explanation": "制度中的未闭合反馈链和监控盲区，常常就是可操作空间的来源。",
+      "strength": 0.82,
+      "is_cross_domain": true,
+      "domain_gap": "系统反馈缺口被迁移为规则场景中的套利入口。"
+    },
+    {
+      "from": "弱闭环",
+      "to": "系统漏洞分类",
+      "relation": "extends",
+      "explanation": "弱闭环把抽象漏洞进一步细化到反馈路径与监控链条层面。",
+      "strength": 0.85,
+      "is_cross_domain": false,
+      "domain_gap": null
+    },
+    {
+      "from": "系统漏洞分类",
+      "to": "失效模式案例库",
+      "relation": "defines",
+      "explanation": "漏洞分类提供了整理与检索失效模式的主标签体系。",
+      "strength": 0.81,
+      "is_cross_domain": false,
+      "domain_gap": null
+    },
+    {
+      "from": "失效模式案例库",
+      "to": "逆向归纳",
+      "relation": "supports",
+      "explanation": "结构相似案例为倒推路径提供了先例与验证模板。",
+      "strength": 0.81,
+      "is_cross_domain": true,
+      "domain_gap": "系统失效样本被迁移为策略推理的案例底座。"
+    },
+    {
+      "from": "学术资源锚点",
+      "to": "元数据",
+      "relation": "defines",
+      "explanation": "锚点限定了元数据检索的精准边界，是元数据抓取的逻辑前提。",
+      "strength": 0.9,
+      "is_cross_domain": false,
+      "domain_gap": null
+    },
+    {
+      "from": "AI工具链",
+      "to": "学术资源锚点",
+      "relation": "enables",
+      "explanation": "工具链中包含了解析标识符并进行多路径搜索的算法实现。",
+      "strength": 0.85,
+      "is_cross_domain": false,
+      "domain_gap": null
+    },
+    {
+      "from": "AI工具链",
+      "to": "元数据",
+      "relation": "enables",
+      "explanation": "工具链实现了对非结构化页面元数据的抓取、解析与上下文拼装。",
+      "strength": 0.88,
+      "is_cross_domain": false,
+      "domain_gap": null
+    },
+    {
+      "from": "经验采样法",
+      "to": "日内动态变化",
+      "relation": "enables",
+      "explanation": "密集采样技术是捕捉并量化个体内动态波动的核心方法论前提。",
+      "strength": 0.92,
+      "is_cross_domain": false,
+      "domain_gap": null
+    },
+    {
+      "from": "日内动态变化",
+      "to": "活力",
+      "relation": "instances",
+      "explanation": "活力是日内动态波动的一种典型心理资源表现形式。",
+      "strength": 0.85,
+      "is_cross_domain": false,
+      "domain_gap": null
+    },
+    {
+      "from": "经验采样法",
+      "to": "活力",
+      "relation": "enables",
+      "explanation": "ESM允许对活力这种瞬时波动的状态进行高频、即时的测量。",
+      "strength": 0.87,
+      "is_cross_domain": false,
+      "domain_gap": null
+    },
+    {
+      "from": "学术资源锚点",
+      "to": "认知杠杆",
+      "relation": "supports",
+      "explanation": "作为极小信息量带动极大学术资源的入口，标识符具备典型的杠杆效应。",
+      "strength": 0.78,
+      "is_cross_domain": true,
+      "domain_gap": "学术标识符被抽象为知识检索领域的认知杠杆点。"
+    },
+    {
+      "from": "AI工具链",
+      "to": "认知杠杆",
+      "relation": "enables",
+      "explanation": "自动化的多路径搜索逻辑是数字时代实现认知效率飞跃的杠杆工具。",
+      "strength": 0.82,
+      "is_cross_domain": true,
+      "domain_gap": "技术工具链被视为认知能力的增程器和杠杆。"
+    },
+    {
+      "from": "经验采样法",
+      "to": "知识复利",
+      "relation": "enables",
+      "explanation": "高频率的即时记录为知识复利所需的复盘提供了客观、高精度的数据源。",
+      "strength": 0.75,
+      "is_cross_domain": true,
+      "domain_gap": "心理学测量方法为认知成长中的数据反馈环节提供支撑。"
+    }
+  ]
+}

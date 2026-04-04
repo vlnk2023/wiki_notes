@@ -1,0 +1,44 @@
+{
+  "_description": "允许的领域列表。Stage A 必须从此列表选择，或申请新增。",
+  "domains": [
+    {
+      "id": "cognition",
+      "label": "认知科学",
+      "aliases": ["认知", "认知心理学", "Cognition"],
+      "description": "认知偏差、心智模型、元认知、决策推理"
+    },
+    {
+      "id": "strategy",
+      "label": "策略与博弈",
+      "aliases": ["策略", "博弈论", "Strategy"],
+      "description": "套利、逆向归纳、系统漏洞利用、竞争策略"
+    },
+    {
+      "id": "systems",
+      "label": "系统工程",
+      "aliases": ["系统", "系统论", "Systems"],
+      "description": "反馈控制、闭环、复杂系统、失效模式"
+    },
+    {
+      "id": "finance",
+      "label": "金融",
+      "aliases": ["金融学", "Finance"],
+      "description": "投资、风控、市场结构、金融工程"
+    },
+    {
+      "id": "psychology",
+      "label": "心理学",
+      "aliases": ["Psychology"],
+      "description": "行为心理、社会心理、动机理论"
+    },
+    {
+      "id": "knowledge-engineering",
+      "label": "知识工程",
+      "aliases": ["知识管理", "Knowledge Engineering"],
+      "description": "知识图谱、知识编译、LLM知识库、PKM"
+    }
+  ],
+  "policy": {
+    "new_domain_threshold": "当现有领域均无法覆盖时，AI 可在 Stage A 输出中提议新领域，需包含 id/label/description，由人工确认后追加到此文件。"
+  }
+}
