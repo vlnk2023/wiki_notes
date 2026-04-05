@@ -1,208 +1,28 @@
 {
-  "nodes": [
-    {
-      "id": "d7efa5253b05f83f",
-      "type": "group",
-      "label": "认知科学",
-      "x": -560,
-      "y": -1670,
-      "width": 1120,
-      "height": 340,
-      "color": "1"
-    },
-    {
-      "id": "7ccd80da5c69aa7f",
-      "type": "file",
-      "file": "wiki/concepts/cognition.md",
-      "x": -480,
-      "y": -1590,
-      "width": 260,
-      "height": 120,
-      "color": "1"
-    },
-    {
-      "id": "141a6ee679170cf1",
-      "type": "group",
-      "label": "心理学",
-      "x": 739,
-      "y": 580,
-      "width": 1120,
-      "height": 340,
-      "color": "2"
-    },
-    {
-      "id": "838d3b5214366d72",
-      "type": "file",
-      "file": "wiki/concepts/睡眠-活力-绩效动态模型.md",
-      "x": 819,
-      "y": 660,
-      "width": 260,
-      "height": 120,
-      "color": "2"
-    },
-    {
-      "id": "7b640340a3430519",
-      "type": "group",
-      "label": "知识工程",
-      "x": -1859,
-      "y": 400,
-      "width": 1120,
-      "height": 700,
-      "color": "3"
-    },
-    {
-      "id": "2446e4a8ce9f684b",
-      "type": "file",
-      "file": "wiki/concepts/AI 增强型学术搜索机制.md",
-      "x": -1779,
-      "y": 480,
-      "width": 260,
-      "height": 120,
-      "color": "3"
-    },
-    {
-      "id": "a4565d3b783ff1ee",
-      "type": "file",
-      "file": "wiki/concepts/知识图谱.md",
-      "x": -1459,
-      "y": 480,
-      "width": 260,
-      "height": 120,
-      "color": "3"
-    },
-    {
-      "id": "a8f241401f90200c",
-      "type": "file",
-      "file": "wiki/concepts/元数据.md",
-      "x": -1139,
-      "y": 480,
-      "width": 260,
-      "height": 120,
-      "color": "3"
-    },
-    {
-      "id": "6d9381490eba951b",
-      "type": "file",
-      "file": "wiki/concepts/事实溯源知识地图.md",
-      "x": -1779,
-      "y": 660,
-      "width": 260,
-      "height": 120,
-      "color": "3"
-    },
-    {
-      "id": "7c6f7305115a979f",
-      "type": "file",
-      "file": "wiki/concepts/基于 D3.js 的事实溯源可视化.md",
-      "x": -1459,
-      "y": 660,
-      "width": 260,
-      "height": 120,
-      "color": "3"
-    },
-    {
-      "id": "9c8e2f56904fc93b",
-      "type": "file",
-      "file": "wiki/concepts/基于 Zep 的 Wiki 语义图谱构建.md",
-      "x": -1139,
-      "y": 660,
-      "width": 260,
-      "height": 120,
-      "color": "3"
-    },
-    {
-      "id": "0210c52501c1b7d2",
-      "type": "file",
-      "file": "wiki/concepts/Graphiti 知识演进机制.md",
-      "x": -1779,
-      "y": 840,
-      "width": 260,
-      "height": 120,
-      "color": "3"
-    }
-  ],
-  "edges": [
-    {
-      "id": "144eeedc13254415",
-      "fromNode": "a8f241401f90200c",
-      "toNode": "6d9381490eba951b",
-      "fromSide": "left",
-      "toSide": "right",
-      "label": "supports"
-    },
-    {
-      "id": "6e25846419878fda",
-      "fromNode": "0210c52501c1b7d2",
-      "toNode": "9c8e2f56904fc93b",
-      "fromSide": "right",
-      "toSide": "left",
-      "label": "extends"
-    },
-    {
-      "id": "2e2b325fc11b65da",
-      "fromNode": "9c8e2f56904fc93b",
-      "toNode": "6d9381490eba951b",
-      "fromSide": "left",
-      "toSide": "right",
-      "label": "enables"
-    },
-    {
-      "id": "c9b990a6a79bbf70",
-      "fromNode": "7c6f7305115a979f",
-      "toNode": "6d9381490eba951b",
-      "fromSide": "left",
-      "toSide": "right",
-      "label": "instances"
-    },
-    {
-      "id": "9137f4c37186d2d9",
-      "fromNode": "2446e4a8ce9f684b",
-      "toNode": "838d3b5214366d72",
-      "fromSide": "right",
-      "toSide": "left",
-      "label": "instances",
-      "style": "dashed"
-    },
-    {
-      "id": "c7c285f8f110cc43",
-      "fromNode": "0210c52501c1b7d2",
-      "toNode": "a8f241401f90200c",
-      "fromSide": "right",
-      "toSide": "left",
-      "label": "supports"
-    },
-    {
-      "id": "139da0de06fa0d08",
-      "fromNode": "9c8e2f56904fc93b",
-      "toNode": "0210c52501c1b7d2",
-      "fromSide": "left",
-      "toSide": "right",
-      "label": "supports"
-    },
-    {
-      "id": "ddec67dbd5f64395",
-      "fromNode": "7c6f7305115a979f",
-      "toNode": "0210c52501c1b7d2",
-      "fromSide": "left",
-      "toSide": "right",
-      "label": "supports"
-    },
-    {
-      "id": "53ea298224f55972",
-      "fromNode": "838d3b5214366d72",
-      "toNode": "2446e4a8ce9f684b",
-      "fromSide": "left",
-      "toSide": "right",
-      "label": "related",
-      "style": "dashed"
-    },
-    {
-      "id": "95d3b570c361a5eb",
-      "fromNode": "6d9381490eba951b",
-      "toNode": "9c8e2f56904fc93b",
-      "fromSide": "right",
-      "toSide": "left",
-      "label": "related"
-    }
-  ]
+	"nodes":[
+		{"id":"d7efa5253b05f83f","type":"group","label":"认知科学","x":-560,"y":-1670,"width":1120,"height":340,"color":"1"},
+		{"id":"7ccd80da5c69aa7f","type":"file","file":"wiki/concepts/cognition.md","x":-480,"y":-1590,"width":260,"height":120,"color":"1"},
+		{"id":"141a6ee679170cf1","type":"group","label":"心理学","x":739,"y":580,"width":1120,"height":340,"color":"2"},
+		{"id":"838d3b5214366d72","type":"file","file":"wiki/concepts/睡眠-活力-绩效动态模型.md","x":819,"y":660,"width":260,"height":120,"color":"2"},
+		{"id":"7b640340a3430519","type":"group","label":"知识工程","x":-1859,"y":400,"width":1120,"height":700,"color":"3"},
+		{"id":"2446e4a8ce9f684b","type":"file","file":"wiki/concepts/AI 增强型学术搜索机制.md","x":-1779,"y":480,"width":260,"height":120,"color":"3"},
+		{"id":"a4565d3b783ff1ee","type":"file","file":"wiki/concepts/知识图谱.md","x":-1459,"y":480,"width":260,"height":120,"color":"3"},
+		{"id":"a8f241401f90200c","type":"file","file":"wiki/concepts/元数据.md","x":-1139,"y":480,"width":260,"height":120,"color":"3"},
+		{"id":"6d9381490eba951b","type":"file","file":"wiki/concepts/事实溯源知识地图.md","x":-1779,"y":660,"width":260,"height":120,"color":"3"},
+		{"id":"7c6f7305115a979f","type":"file","file":"wiki/concepts/基于 D3.js 的事实溯源可视化.md","x":-1459,"y":660,"width":260,"height":120,"color":"3"},
+		{"id":"9c8e2f56904fc93b","type":"file","file":"wiki/concepts/基于 Zep 的 Wiki 语义图谱构建.md","x":-1139,"y":660,"width":260,"height":120,"color":"3"},
+		{"id":"0210c52501c1b7d2","type":"file","file":"wiki/concepts/Graphiti 知识演进机制.md","x":-1779,"y":840,"width":260,"height":120,"color":"3"}
+	],
+	"edges":[
+		{"id":"144eeedc13254415","fromNode":"a8f241401f90200c","toNode":"6d9381490eba951b","fromSide":"left","toSide":"right","label":"supports"},
+		{"id":"6e25846419878fda","fromNode":"0210c52501c1b7d2","toNode":"9c8e2f56904fc93b","fromSide":"right","toSide":"left","label":"extends"},
+		{"id":"2e2b325fc11b65da","fromNode":"9c8e2f56904fc93b","toNode":"6d9381490eba951b","fromSide":"left","toSide":"right","label":"enables"},
+		{"id":"c9b990a6a79bbf70","fromNode":"7c6f7305115a979f","toNode":"6d9381490eba951b","fromSide":"left","toSide":"right","label":"instances"},
+		{"id":"9137f4c37186d2d9","fromNode":"2446e4a8ce9f684b","toNode":"838d3b5214366d72","fromSide":"right","toSide":"left","label":"instances","style":"dashed"},
+		{"id":"c7c285f8f110cc43","fromNode":"0210c52501c1b7d2","toNode":"a8f241401f90200c","fromSide":"right","toSide":"left","label":"supports"},
+		{"id":"139da0de06fa0d08","fromNode":"9c8e2f56904fc93b","toNode":"0210c52501c1b7d2","fromSide":"left","toSide":"right","label":"supports"},
+		{"id":"ddec67dbd5f64395","fromNode":"7c6f7305115a979f","toNode":"0210c52501c1b7d2","fromSide":"left","toSide":"right","label":"supports"},
+		{"id":"53ea298224f55972","fromNode":"838d3b5214366d72","toNode":"2446e4a8ce9f684b","fromSide":"left","toSide":"right","label":"related","style":"dashed"},
+		{"id":"95d3b570c361a5eb","fromNode":"6d9381490eba951b","toNode":"9c8e2f56904fc93b","fromSide":"right","toSide":"left","label":"related"}
+	]
 }

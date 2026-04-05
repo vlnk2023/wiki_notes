@@ -59,6 +59,9 @@ python scripts/render_prompts.py c bridge
 2.  **💎 提炼 (Extract)**：利用 LLM 将素材抽离为原子化的 **概念卡片** (`wiki/concepts/`)。
 3.  **🔗 织网 (Relate)**：定义概念间的因果、补充或跨领域连接，记录于 `wiki/relations.json`。
 4.  **🗺️ 映射 (Visualize)**：自动生成 `index.md` 和 `.canvas` 知识地图，实现全局导航。
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e05a11df-71f0-43c5-b0b8-3b2e36a383ad" width="900" alt="知识图谱可视化示意图" />
+</p>
 
 ---
 
