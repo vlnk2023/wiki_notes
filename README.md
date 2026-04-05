@@ -1,135 +1,99 @@
-# wiki_notes
+# 🧠 Wiki Notes: 知识演变系统
 
-一个以 Markdown 和 Python 脚本为核心的个人知识库仓库，用于沉淀原始摘录、概念卡片、关系网络和知识地图。可直接在 Obsidian 中打开，但不再依赖仓库内置的 `.obsidian/` 配置。
+> **“真正有效的个人知识库，核心不在于存储，而在于构建可涌现的关系网络。”**
 
-![知识图谱可视化](Pasted%20image%2020260404213454.png)
+[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Obsidian Friendly](https://img.shields.io/badge/Editor-Obsidian-purple.svg)](https://obsidian.md/)
 
-## 项目定位
+`wiki_notes` 是一个以关系为中心的个人知识系统。它超越了传统的“层级文件夹”模式，通过 LLM 增强的自动化工作流，将碎片化的原始摘录转化为具备“工作记忆”属性的动态知识库。
 
-这个仓库的目标不是简单存笔记，而是把零散素材逐步整理为可检索、可关联、可扩展的知识系统。
+---
 
-适合的使用场景：
+## 🌟 核心理念：为什么传统笔记会失效？
 
-- 收集阅读摘录、研究素材和阶段性思考
-- 将原始内容抽取为概念卡片
-- 建立概念之间的关系图谱
-- 在 Obsidian 中持续维护个人知识库
+### 症状：三个“找不到”
+*   **收藏癖**：网页剪藏一堆，真正要用时石沉大海。
+*   **孤岛化**：摘录灵感满地，但内容之间没有化学反应。
+*   **低效熵增**：笔记存得越多，系统越乱，无法沉淀为个人智慧。
 
-## 目录结构
+### 范式转移
+| 维度 | 传统笔记（文件夹/线性） | **Wiki 关系网络（本项目）** |
+| :--- | :--- | :--- |
+| **结构方向** | 自上而下预设分类（死板） | **自下而上涌现生长（灵活）** |
+| **数据状态** | 存入即成“死数据” | **节点随链接持续激活** |
+| **提取前提** | 必须记住它在哪个文件夹 | **从任意入口顺流而下** |
+| **关联方式** | 手动标注“参见...” | **双向链接自动溯源** |
 
-- `wiki/`：整理后的知识库正文、概念卡片、索引和关系数据
-- `raw/`：原始素材、剪藏内容，以及可选的抽取中间结果目录
-- `prompts/`：用于抽取、写作、关联、审查和索引维护的提示词模板
-- `scripts/`：本地编译和 prompt 回放脚本
+---
 
-## 运行要求
+## 🚀 快速开始
 
-- Python 3.11+
-- 无第三方依赖，使用标准库即可运行
+### 1. 环境准备
+*   **Python**: 3.11 或更高版本（仅需标准库）。
+*   **编辑器**: 推荐使用 [Obsidian](https://obsidian.md/) 打开本仓库根目录。
 
-## 快速开始
-
+### 2. 一键编译
+运行以下命令初始化或更新你的知识地图：
 ```powershell
+# 重新生成索引、图谱关系及可视化 Canvas
 python scripts/compile_wiki.py
-python scripts/render_prompts.py a raw/Clippings/为啥gemini可以搜索到目标论文的方法.md
-python scripts/render_prompts.py c bridge
-python scripts/render_prompts.py validate
 ```
 
-以上命令会：
+### 3. LLM 辅助抽取 (CLI 模式)
+```powershell
+# 针对特定素材生成抽取 Prompt (Stage A)
+python scripts/render_prompts.py a raw/Clippings/your_note.md
 
-- 重新生成 `wiki/index.md`、`wiki/graph.json`、`wiki/knowledge_map.md`、`wiki/knowledge_map.canvas`
-- 生成一个可复现的 Stage A prompt
-- 生成一个跨领域关系扫描 prompt
-- 校验当前仓库中是否存在 Stage A 抽取结果
+# 跨领域关系扫描 (Stage C)
+python scripts/render_prompts.py c bridge
+```
 
-## 工作流
+---
 
-这个仓库围绕一套固定的知识整理流程运行：
+## 🔄 核心工作流
 
-1. 从 `raw/` 中收集原始笔记、网页剪藏或摘录内容。
-2. 使用 `prompts/` 中的提示词对素材进行抽取和结构化整理。
-3. 将概念沉淀为 `wiki/concepts/` 下的 Markdown 卡片。
-4. 在 `wiki/relations.json` 中维护概念之间的关系。
-5. 更新 `wiki/index.md`、`wiki/knowledge_map.md` 和 `wiki/knowledge_map.canvas`，保持知识库可导航。
+本项目遵循 **Andrej Karpathy** 提倡的“工作记忆”构建流程：
 
-## 核心能力
+1.  **📥 收集 (Collect)**：将原始网页剪藏、想法草稿丢入 `raw/` 目录。
+2.  **💎 提炼 (Extract)**：利用 LLM 将素材抽离为原子化的 **概念卡片** (`wiki/concepts/`)。
+3.  **🔗 织网 (Relate)**：定义概念间的因果、补充或跨领域连接，记录于 `wiki/relations.json`。
+4.  **🗺️ 映射 (Visualize)**：自动生成 `index.md` 和 `.canvas` 知识地图，实现全局导航。
 
-### 1. Extract
+---
 
-从原始文本中识别主题、领域和高密度概念。
+## 🤖 Gemini CLI 深度集成
 
-### 2. Write
+本项目已原生支持 `convert-to-wiki` 技能，你可以直接在 Gemini CLI 中使用自然语言指挥：
 
-将概念整理为结构化 Markdown 条目，突出定义、意义、原理和局限。
+*   **全流程自动化**：
+    > “请对 raw 文件夹中的新文件执行 A->B->C->D->G 的完整编译。”
+*   **智能问答**：
+    > “根据现有 Wiki 知识，分析『认知杠杆』与『规模效应』的关系。”
+*   **库维护**：
+    > “帮我扫描 wiki/ 下缺失关联的孤岛概念并建立索引。”
 
-### 3. Relate
+---
 
-维护概念间的支持、反对、因果、类比等关系。
+## 📂 目录结构说明
 
-### 4. Maintain
+```text
+D:\vscode_files\test_202603\wiki_notes\
+├── wiki/               # 🏆 核心知识库 (概念卡片、索引、关系数据)
+│   ├── concepts/       # 原子化笔记
+│   ├── graph.json      # 关系图谱数据
+│   └── knowledge_map   # 可视化导航 (MD/Canvas)
+├── raw/                # 📥 原始素材仓库
+├── prompts/            # 📝 LLM 阶段性提示词模板 (A-G 阶段)
+├── scripts/            # 🛠️ 自动化编译与渲染脚本
+└── README.md           # 📖 你正在阅读的指南
+```
 
-按领域、主题、概念的层级更新知识索引。
+---
 
-### 5. Answer
+## 🔗 参考与致敬
+*   **理论基础**：[Andrej Karpathy 关于动态知识库的分享](https://x.com/karpathy/status/1841890373447999818)
+*   **工具支持**：[Obsidian](https://obsidian.md/) & [Gemini CLI](https://github.com/google/gemini-cli)
 
-基于现有知识库上下文回答问题，支持跨领域联想和类比。
-
-### 6. Audit
-
-检查标签一致性、路径有效性和逻辑缺口。
-
-### 7. Visualize
-
-生成适用于 Obsidian Canvas 的知识地图视图。
-
-## 设计原则
-
-- 领域优先：概念尽量落在明确的领域和主题下
-- 强调关联：比单条笔记更重视概念之间的连接
-- 数据与表现分离：JSON 负责结构与关系，Markdown 负责内容表达
-- 持续迭代：允许从粗糙摘录逐步演化为稳定知识节点
-
-## 使用方式
-
-1. 运行 `python scripts/compile_wiki.py`，确认当前知识库结构可正常编译。
-2. 用 Obsidian 打开仓库根目录（可选）。
-3. 把原始资料放入 `raw/`。
-4. 根据任务选择 `prompts/` 下的提示词模板，或使用 `scripts/render_prompts.py` 生成可复现 prompt。
-5. 将整理结果更新到 `wiki/`。
-6. 重新运行 `python scripts/compile_wiki.py`，同步索引、图谱和 Canvas。
-
-## 在 Gemini CLI 中使用 convert-to-wiki Skill
- 以下是具体的使用方法：
-
-  1. 如何激活
-  你不需要手动运行复杂的命令，只需在对话中表达以下意图之一，Gemini CLI 就会自动调用 activate_skill 工具加载该 Skill：
-
-   * 直接要求执行阶段：
-       * 使用 convert-to-wiki 编译 raw 文件夹下的文档
-       * 帮我运行 A 到 D 阶段，整理最新笔记
-   * 描述目标任务：
-       * 把 raw 里的 Clipping 笔记提取摘要并写入 wiki
-       * 更新当前的知识图谱关系
-       * 根据 wiki 内容生成可视化画布 (Canvas)
-
-  2. 常用指令示例
-  你可以直接复制并修改以下指令：
-
-   * 全流程自动编译（从原始文档到可视化）：
-      > "请使用 convert-to-wiki skill 对 raw/ 中的新文件执行全流程编译 (A->B->C->D->G)。"
-   * 仅提取并写入文章（跳过关系图和索引更新）：
-      > "运行 convert-to-wiki 的 A 和 B 阶段，将 raw/Clippings 下的内容转化为 wiki 概念。"
-   * 维护现有知识库：
-      > "执行 C 和 D 阶段，帮我重新梳理 wiki/ 下的概念关系并更新索引。"
-   * 知识问答：
-      > "执行阶段 E：根据现有 Wiki 知识，解释一下『认知杠杆』和『制度套利』的关系。"
-
-  3. 关键文件依赖
-  在 CLI 中使用前，请确保你的工作目录包含以下结构：
-   * prompts/*.md：各阶段的具体提示词模板。
-   * wiki/taxonomy.json：定义合法的领域（Domain）列表。
-   * raw/：存放待处理的原始文档。
-
-  现在，你可以尝试发送：“请对 raw 文件夹中的文档执行一次完整的编译流程。” 来启动它。
- 
+---
+© 2026 Wiki Notes System. 基于“关系即智慧”的理念构建。
