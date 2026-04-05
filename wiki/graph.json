@@ -1,50 +1,115 @@
 {
-  "metadata": {
-    "concept_degrees": {
-      "元数据": {
-        "in": 4,
-        "out": 3,
-        "total_degree": 7,
-        "domain": "knowledge-engineering"
-      },
-      "事实溯源知识地图": {
-        "in": 4,
-        "out": 4,
-        "total_degree": 8,
-        "domain": "knowledge-engineering"
-      },
-      "AI 增强型学术搜索机制": {
-        "in": 1,
-        "out": 1,
-        "total_degree": 2,
-        "domain": "knowledge-engineering"
-      },
-      "Graphiti 知识演进机制": {
-        "in": 2,
-        "out": 2,
-        "total_degree": 4,
-        "domain": "knowledge-engineering"
-      },
-      "基于 D3.js 的事实溯源可视化": {
-        "in": 0,
-        "out": 2,
-        "total_degree": 2,
-        "domain": "knowledge-engineering"
-      },
-      "基于 Zep 的 Wiki 语义图谱构建": {
-        "in": 2,
-        "out": 2,
-        "total_degree": 4,
-        "domain": "knowledge-engineering"
-      },
-      "睡眠-活力-绩效动态模型": {
-        "in": 1,
-        "out": 1,
-        "total_degree": 2,
-        "domain": "psychology"
-      }
+  "generated_at": "2026-04-05T21:00:53",
+  "nodes": [
+    {
+      "id": "cognition",
+      "label": "cognition",
+      "domain": "cognition",
+      "domain_label": "认知科学",
+      "theme": "认知基础",
+      "file": "wiki/concepts/cognition.md",
+      "tags": [],
+      "status": "stable",
+      "updated_at": "",
+      "source_notes": []
+    },
+    {
+      "id": "AI 增强型学术搜索机制",
+      "label": "AI 增强型学术搜索机制",
+      "domain": "knowledge-engineering",
+      "domain_label": "知识工程",
+      "theme": "信息检索",
+      "file": "wiki/concepts/AI 增强型学术搜索机制.md",
+      "tags": [],
+      "status": "stable",
+      "updated_at": "",
+      "source_notes": []
+    },
+    {
+      "id": "知识图谱",
+      "label": "知识图谱",
+      "domain": "knowledge-engineering",
+      "domain_label": "知识工程",
+      "theme": "基础架构",
+      "file": "wiki/concepts/知识图谱.md",
+      "tags": [],
+      "status": "stable",
+      "updated_at": "",
+      "source_notes": []
+    },
+    {
+      "id": "元数据",
+      "label": "元数据",
+      "domain": "knowledge-engineering",
+      "domain_label": "知识工程",
+      "theme": "底层支柱",
+      "file": "wiki/concepts/元数据.md",
+      "tags": [],
+      "status": "stable",
+      "updated_at": "",
+      "source_notes": []
+    },
+    {
+      "id": "事实溯源知识地图",
+      "label": "事实溯源知识地图",
+      "domain": "knowledge-engineering",
+      "domain_label": "知识工程",
+      "theme": "知识可视化",
+      "file": "wiki/concepts/事实溯源知识地图.md",
+      "tags": [],
+      "status": "stable",
+      "updated_at": "",
+      "source_notes": []
+    },
+    {
+      "id": "基于 D3.js 的事实溯源可视化",
+      "label": "基于 D3.js 的事实溯源可视化",
+      "domain": "knowledge-engineering",
+      "domain_label": "知识工程",
+      "theme": "知识可视化",
+      "file": "wiki/concepts/基于 D3.js 的事实溯源可视化.md",
+      "tags": [],
+      "status": "stable",
+      "updated_at": "",
+      "source_notes": []
+    },
+    {
+      "id": "基于 Zep 的 Wiki 语义图谱构建",
+      "label": "基于 Zep 的 Wiki 语义图谱构建",
+      "domain": "knowledge-engineering",
+      "domain_label": "知识工程",
+      "theme": "知识图谱自动化",
+      "file": "wiki/concepts/基于 Zep 的 Wiki 语义图谱构建.md",
+      "tags": [],
+      "status": "stable",
+      "updated_at": "",
+      "source_notes": []
+    },
+    {
+      "id": "Graphiti 知识演进机制",
+      "label": "Graphiti 知识演进机制",
+      "domain": "knowledge-engineering",
+      "domain_label": "知识工程",
+      "theme": "知识管理",
+      "file": "wiki/concepts/Graphiti 知识演进机制.md",
+      "tags": [],
+      "status": "stable",
+      "updated_at": "",
+      "source_notes": []
+    },
+    {
+      "id": "睡眠-活力-绩效动态模型",
+      "label": "睡眠-活力-绩效动态模型",
+      "domain": "psychology",
+      "domain_label": "心理学",
+      "theme": "组织行为学",
+      "file": "wiki/concepts/睡眠-活力-绩效动态模型.md",
+      "tags": [],
+      "status": "stable",
+      "updated_at": "",
+      "source_notes": []
     }
-  },
+  ],
   "edges": [
     {
       "from": "元数据",
@@ -176,5 +241,64 @@
       "source_excerpt": "related: [[\"基于 Zep 的 Wiki 语义图谱构建\"]]",
       "confidence_source": "prompt_relation_scan"
     }
-  ]
+  ],
+  "metadata": {
+    "concept_degrees": {
+      "AI 增强型学术搜索机制": {
+        "in": 1,
+        "out": 1,
+        "total_degree": 2,
+        "domain": "knowledge-engineering"
+      },
+      "cognition": {
+        "in": 0,
+        "out": 0,
+        "total_degree": 0,
+        "domain": "cognition"
+      },
+      "Graphiti 知识演进机制": {
+        "in": 2,
+        "out": 2,
+        "total_degree": 4,
+        "domain": "knowledge-engineering"
+      },
+      "事实溯源知识地图": {
+        "in": 3,
+        "out": 1,
+        "total_degree": 4,
+        "domain": "knowledge-engineering"
+      },
+      "元数据": {
+        "in": 1,
+        "out": 1,
+        "total_degree": 2,
+        "domain": "knowledge-engineering"
+      },
+      "基于 D3.js 的事实溯源可视化": {
+        "in": 0,
+        "out": 2,
+        "total_degree": 2,
+        "domain": "knowledge-engineering"
+      },
+      "基于 Zep 的 Wiki 语义图谱构建": {
+        "in": 2,
+        "out": 2,
+        "total_degree": 4,
+        "domain": "knowledge-engineering"
+      },
+      "睡眠-活力-绩效动态模型": {
+        "in": 1,
+        "out": 1,
+        "total_degree": 2,
+        "domain": "psychology"
+      },
+      "知识图谱": {
+        "in": 0,
+        "out": 0,
+        "total_degree": 0,
+        "domain": "knowledge-engineering"
+      }
+    },
+    "skipped_edges": []
+  }
 }

@@ -1,6 +1,6 @@
 # wiki_notes
 
-一个基于 Obsidian 的个人知识库仓库，用于沉淀原始摘录、概念卡片、关系网络和知识地图。
+一个以 Markdown 和 Python 脚本为核心的个人知识库仓库，用于沉淀原始摘录、概念卡片、关系网络和知识地图。可直接在 Obsidian 中打开，但不再依赖仓库内置的 `.obsidian/` 配置。
 
 ![知识图谱可视化](Pasted%20image%2020260404213454.png)
 
@@ -18,9 +18,30 @@
 ## 目录结构
 
 - `wiki/`：整理后的知识库正文、概念卡片、索引和关系数据
-- `raw/`：原始素材、剪藏内容、抽取中间结果
+- `raw/`：原始素材、剪藏内容，以及可选的抽取中间结果目录
 - `prompts/`：用于抽取、写作、关联、审查和索引维护的提示词模板
-- `.obsidian/`：Obsidian 配置文件
+- `scripts/`：本地编译和 prompt 回放脚本
+
+## 运行要求
+
+- Python 3.11+
+- 无第三方依赖，使用标准库即可运行
+
+## 快速开始
+
+```powershell
+python scripts/compile_wiki.py
+python scripts/render_prompts.py a raw/Clippings/为啥gemini可以搜索到目标论文的方法.md
+python scripts/render_prompts.py c bridge
+python scripts/render_prompts.py validate
+```
+
+以上命令会：
+
+- 重新生成 `wiki/index.md`、`wiki/graph.json`、`wiki/knowledge_map.md`、`wiki/knowledge_map.canvas`
+- 生成一个可复现的 Stage A prompt
+- 生成一个跨领域关系扫描 prompt
+- 校验当前仓库中是否存在 Stage A 抽取结果
 
 ## 工作流
 
@@ -71,11 +92,12 @@
 
 ## 使用方式
 
-1. 用 Obsidian 打开仓库根目录。
-2. 把原始资料放入 `raw/`。
-3. 根据任务选择 `prompts/` 下的提示词模板。
-4. 将整理结果更新到 `wiki/`。
-5. 通过索引、关系文件和 Canvas 持续维护知识网络。
+1. 运行 `python scripts/compile_wiki.py`，确认当前知识库结构可正常编译。
+2. 用 Obsidian 打开仓库根目录（可选）。
+3. 把原始资料放入 `raw/`。
+4. 根据任务选择 `prompts/` 下的提示词模板，或使用 `scripts/render_prompts.py` 生成可复现 prompt。
+5. 将整理结果更新到 `wiki/`。
+6. 重新运行 `python scripts/compile_wiki.py`，同步索引、图谱和 Canvas。
 
 ## 在 Gemini CLI 中使用 convert-to-wiki Skill
  以下是具体的使用方法：
@@ -110,3 +132,4 @@
    * raw/：存放待处理的原始文档。
 
   现在，你可以尝试发送：“请对 raw 文件夹中的文档执行一次完整的编译流程。” 来启动它。
+ 

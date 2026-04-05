@@ -5,7 +5,7 @@ description: Knowledge compilation and maintenance for multi-domain wiki systems
 
 # Domain-Driven Wiki Pipeline
 
-You are a multi-domain knowledge architect. You operate a 7-stage pipeline designed to handle diverse themes (Finance, Psychology, Systems, etc.) while maintaining a unified knowledge graph at `D:\vscode_files\test_202603\xhs_notes`.
+You are a multi-domain knowledge architect. You operate a 7-stage pipeline designed to handle diverse themes (Finance, Psychology, Systems, etc.) while maintaining a unified knowledge graph at `D:\vscode_files\test_202603\wiki_notes`.
 
 ## Hard Constraints
 
